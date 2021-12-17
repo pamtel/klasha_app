@@ -1,0 +1,429 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-Regular.ttf');
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --app-dark: #040415;
+  --app-green: #008e8a;
+  --app-dark-2: #292e39;
+  --app-dark-3: #141518;
+  --app-white: #ffffff;
+}
+
+.bg-dark-2 {
+  background-color: var(--app-dark-2) !important;
+}
+
+.bg-dark-3 {
+  background-color: var(--app-dark-3) !important;
+}
+
+.bg-green {
+  background-color: var(--app-green) !important;
+}
+
+.text-green{
+  color: var(--app-green) !important;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Poppins;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -9999;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.dialog-active {
+  z-index: 9999;
+  opacity: 1;
+}
+
+/* Sidebar styles */
+
+.sidebar-list {
+  padding-top: 20px !important;
+  .list-icon {
+    background-color: var(--app-dark-2);
+    color: #fff !important;
+    width: 50px;
+    height: 50px;
+
+    object {
+      width: 28px;
+      height: 28px;
+    }
+
+    &:hover {
+      background-color: var(--app-dark-2);
+    }
+  }
+  .MuiListItemIcon-root {
+    color: #fff !important;
+    display: inline-flex;
+    min-width: auto !important;
+    flex-shrink: 0;
+  }
+
+  .list-item {
+    border: 1px solid transparent;
+
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding: 5px !important;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+
+.list-item.active {
+     border-top-color: var(--app-green);
+    border-right-color: var(--app-green);
+    border-bottom-color: var(--app-green);
+}
+
+}
+
+
+.main-header {
+  height: 50px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  color: #fff !important;
+}
+
+
+.page-wrapper {
+  color: #fff;
+  padding-left: 25px;
+  overflow: hidden;
+  h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+}
+
+
+ .card {
+    min-height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    padding: 20px;
+    h3 {
+      font-size: 22px;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 17px;
+    }
+
+    .card-header{
+      margin-bottom: 15px
+    }
+  }
+  .card.green {
+    background-color: var(--app-green);
+  }
+
+  .card.dark {
+    background-color: var(--app-dark-3);
+    width: 100%;
+  }
+  .row {
+    display: flex;
+  }
+
+  .border{
+    border: 1px solid #eee;
+  }
+
+  .pr-0{
+    padding-right: 0 !important;
+  }
+
+
+  .switch {
+  margin: 50px;
+}
+
+.cards-con {
+  width: 70%;
+
+
+  .greeting-card-con {
+    width: 100%;
+    position: relative;
+
+    .card {
+      height: 290px;
+      h3{
+        margin-bottom: 15px !important;
+      }
+      .content-con {
+        width: 70%;
+      }
+      img {
+        height: 322px;
+        position: absolute;
+        right: -40px;
+        top: -20px;
+      }
+    }
+
+    .action {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+    }
+  }
+
+  .reminder-card-con {
+    width: 300px;
+    margin-left: 20px;
+
+    .switch-con{
+      margin-bottom: 10px;
+    }
+
+    .card{
+      padding-left: 15px;
+      small{
+        font-size: 12px;
+        line-height: 0 !important;
+      }
+    }
+  }
+}
+
+.calender-con {
+width: 30%;
+  .inner{
+   border: 1px solid var(--app-green);
+  border-radius: 10px;
+  margin-left: 10px;
+  padding-right: 10px;
+  height: 100%;
+  overflow: hidden;
+  }
+
+
+   color:  var(--app-white) !important;
+
+.MuiPickersStaticWrapper-staticWrapperRoot{
+  background-color: transparent !important;
+
+  .MuiPickersDay-day{
+  color:  var(--app-white) !important;
+  }
+
+  .MuiIconButton-root {
+    color:  var(--app-white) !important;
+}
+
+  .MuiPickersCalendarHeader-iconButton{
+    background-color: transparent !important;
+  }
+
+
+  .MuiPickersCalendarHeader-dayLabel{
+  color:  var(--app-white) !important;
+  }
+
+
+  .MuiPickersDay-daySelected{
+    background-color: var(--app-green) !important;
+  }
+}
+
+}
+
+ .contact-card-con{
+    width: 40%;
+    margin-top: 20px;
+
+    .MuiTypography-colorTextSecondary{
+      color: rgba(255, 255, 255, 50%) !important;
+      font-size: 13px !important;
+    }
+
+    .MuiSvgIcon-root{
+        color:#292E39 ;
+    }
+  }
+
+  .chart-card-con{
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 15px;
+  }
+
+.d-flex {
+  display: flex;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.ml-5{
+  margin-left: 5px;
+}
+
+.text-right{
+  float: left;
+}
+
+.btn {
+  height: 40px !important;
+  width: auto !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+}
+
+.btn.btn-white {
+  background-color: var(--app-white);
+  color: var(--app-green);
+}
+
+.btn.btn-outline-green {
+  background-color: transparent !important;
+  color: var(--app-green);
+  border: 1px solid var(--app-green);
+}
+
+
+.react-resizable {
+  max-width: 100%;
+}
+
+.react-resizable-handle {
+  bottom: -10px;
+  right: -10px;
+}
+
+.lagRadar {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+
+
+.searchInput {
+  margin: 0 30px 0 10px;
+  color: #fff;
+  border-bottom: 2px solid #008E8A;
+}
+
+.MuiInput-underline:after {
+  content: "";
+  border-bottom: none !important;
+}
+.wrapper {
+  padding: 20px;
+  background-color: var(--app-dark-2);
+  margin: 15px 0;
+  border-radius: 10px;
+}
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.meeting {
+  width: auto;
+  display: inline-block;
+  padding: 0 8px;
+  margin: 0 16px 4px 0;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.time {
+  font-size: 10px;
+  opacity: .7;
+}
+.meeting.green {
+  background-color: #52d869,
+}
+
+.meeting.blue {
+  background-color: #505dd6
+}
+
+.graph-text {
+  font-size: 12px !important;
+  padding: 10px 0;
+}
+
+.graph-footer {
+  font-size: 12px !important;
+
+    .yellow {
+      color: #db9035;
+    }
+    .red {
+      color: #f94c4d;
+    }
+    .blue {
+      color: #0f779b;
+    }
+
+}
