@@ -1,7 +1,7 @@
 import React from "react";
 import { ScheduleType } from "../../types";
 import List from "@material-ui/core/List";
-import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 
 const eventsDetails: ScheduleType[] = [
   {
@@ -32,12 +32,8 @@ export const Events = () => {
           return (
             <div key={value.id} className="wrapper">
               <div className="header-wrapper">
-              <p
-                className={`meeting ${value.color}`}
-              >
-                {value.meeting}
-              </p>
-              <MoreHorizIcon />
+                <p className={`meeting ${value.color}`}>{value.meeting}</p>
+                <MoreHorizIcon />
               </div>
               <p>{value.description}</p>
               <p className="time">{value.time}</p>

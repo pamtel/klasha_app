@@ -296,7 +296,7 @@ width: 30%;
     }
 
     .MuiSvgIcon-root{
-        color:#292E39 ;
+        color:#292E39;
     }
   }
 
@@ -380,13 +380,17 @@ width: 30%;
 }
 .wrapper {
   padding: 20px;
-  background-color: var(--app-dark-2);
+  background-color: var(--app-dark-3);
   margin: 15px 0;
   border-radius: 10px;
 }
 .header-wrapper {
   display: flex;
   justify-content: space-between;
+
+  .MuiSvgIcon-root{
+    color:#292E39;
+}
 }
 .meeting {
   width: auto;
