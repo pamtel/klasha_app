@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { MuiPickersUtilsProvider, DatePicker } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
+import { MaterialUiPickersDate } from '@material-ui/pickers/typings/date';
 
 export const Calender = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
-  const handleDateChange = (e: Date) => {
-    setSelectedDate(e);
+  const handleDateChange = () => {
+    setSelectedDate(new Date());
   };
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -15,7 +16,7 @@ export const Calender = () => {
         variant="static"
         disabled={true}
         value={selectedDate}
-        onChange={(e) => handleDateChange(e)}
+        onChange={handleDateChange}
       />
     </MuiPickersUtilsProvider>
   );

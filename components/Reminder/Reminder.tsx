@@ -49,9 +49,7 @@ const Reminder = () => {
     checkedB: true,
   });
 
-  const handleChange = (event) => {
-    setState({ ...state, [event.target.name]: event.target.checked });
-  };
+ 
 
   return (
     <div className="card dark">
@@ -65,7 +63,7 @@ const Reminder = () => {
             focusVisibleClassName={IOSSClass.focusVisible}
             disableRipple
             checked={state.checkedA}
-            onChange={handleChange}
+            onChange={() => {}}
             name="checkedA"
             classes={{
               root: IOSSClass.root,
@@ -87,7 +85,7 @@ const Reminder = () => {
             focusVisibleClassName={IOSSClass.focusVisible}
             disableRipple
             checked={state.checkedB}
-            onChange={handleChange}
+            onChange={() => {}}
             name="checkedB"
             classes={{
               root: IOSSClass.root,
